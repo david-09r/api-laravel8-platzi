@@ -11,6 +11,7 @@ class PostController extends Controller
     {
         return view('index',
         [
+
             'posts' => Post::latest()->paginate()
         ]);
     }

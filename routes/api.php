@@ -8,4 +8,11 @@ Route::prefix('v2')->group(function () {
         \App\Http\Controllers\Api\V2\PostController::class
     )->only(['index', 'show', 'destroy']
     )->middleware('auth:sanctum');
+
 });
+
+Route::post('login',
+[
+    \App\Http\Controllers\Api\LoginController::class,
+    'login'
+]);

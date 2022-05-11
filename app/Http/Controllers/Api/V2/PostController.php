@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use App\Http\Resources\V2\PostCollection;
-use App\Http\Resources\V1\PostResource;
+use App\Http\Resources\V2\PostResource;
 
 class PostController extends Controller
 {
@@ -39,7 +39,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+        return new PostResource($post);
     }
 
     /**

@@ -7,5 +7,5 @@ use App\Http\Controllers\Api\V1\PostController;
 Route::prefix('v1')->group(function () {
     Route::apiResource('posts',
         \App\Http\Controllers\Api\V1\PostController::class
-    );
+    )->only(['index', 'show', 'destroy']);
 });
